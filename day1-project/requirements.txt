@@ -1,0 +1,6 @@
+# Self-contained deps for the Day 1 project.
+azure-ai-agents==1.1.0
+azure-identity>=1.19.0
+azure-search-documents==12.0.0
+python-dotenv>=1.0.1
+openai>=1.40          # AzureOpenAI client for embeddings (config.get_embedding_client)
