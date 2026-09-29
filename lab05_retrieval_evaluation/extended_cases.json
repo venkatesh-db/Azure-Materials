@@ -1,0 +1,21 @@
+{
+  "description": "Participant extensions. Add cases here (same format as eval_cases.json); run with --include-extended. Four examples provided.",
+  "cases": [
+    {"id": "X01", "type": "authorised restricted access",
+     "question": "What are the forensic steps for a compromised privileged admin account?",
+     "user_groups": ["security-operations"],
+     "expected_status": ["answered", "escalated"], "expected_docs": ["SEC-FOR-001"],
+     "acceptable_citations": ["SEC-FOR-001", "POL-SEC-001"]},
+    {"id": "X02", "type": "correct runbook",
+     "question": "We see duplicate Kafka payment events on payment-service - what should we check?",
+     "expected_status": ["answered", "escalated"], "expected_docs": ["RB-PAY-001"],
+     "acceptable_citations": ["RB-PAY-001"]},
+    {"id": "X03", "type": "policy question",
+     "question": "Can an automated agent remediate a suspected credential compromise on auth-service?",
+     "expected_status": ["answered", "escalated"], "expected_docs": ["POL-SEC-001"],
+     "acceptable_citations": ["POL-SEC-001", "CAT-SVC-001"], "expect_escalation": true},
+    {"id": "X04", "type": "no relevant document",
+     "question": "What is the lunch menu in the Washington office cafeteria?",
+     "expected_status": ["refused"], "expected_docs": [], "acceptable_citations": []}
+  ]
+}
